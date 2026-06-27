@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Archipiélago Vivo</title>
+  <meta name="description" content="Mapa y agenda colaborativa para conectar personas, colectivos e iniciativas que cuidan, construyen y defienden las Islas Canarias." />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Inicio de Archipiélago Vivo">
+      Archipiélago Vivo
+    </a>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="main-nav"
+    >
+      <span class="sr-only">Abrir menú</span>
+      ☰
+    </button>
+
+    <nav id="main-nav" class="main-nav" aria-label="Navegación principal">
+      <a href="#que-es">Qué es</a>
+      <a href="/mapa.html">Ver mapa</a>
+      <a href="/agenda.html">Agenda</a>
+      <a href="/participa.html">Participa</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+        <p class="eyebrow">Mapa y agenda colaborativa</p>
+
+        <h1>Archipiélago Vivo</h1>
+
+        <p class="hero-text">
+          Un mapa y una agenda colaborativa para conectar personas, colectivos
+          e iniciativas que construyen, cuidan y defienden las Islas Canarias.
+        </p>
+
+        <div class="button-group">
+          <a class="button button-primary" href="/mapa.html">Ver el mapa</a>
+          <a class="button button-secondary" href="/participa.html">Participar</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="que-es" class="section">
+      <div class="container narrow">
+        <h2>Qué es</h2>
+
+        <p>
+          Archipiélago Vivo es un proyecto abierto para reunir y visibilizar
+          iniciativas distribuidas por las Islas Canarias.
+        </p>
+
+        <p>
+          Cualquier persona puede participar enviando propuestas, actividades,
+          colectivos, espacios o proyectos vinculados al cuidado del territorio
+          y la vida comunitaria.
+        </p>
+
+        <p>
+          La plataforma no sustituye a las personas ni a los colectivos:
+          ayuda a conectarlos. La información se construye colectivamente y
+          crecerá con las aportaciones de la comunidad.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-muted">
+      <div class="container">
+        <h2>Qué encontrarás</h2>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Mapa colaborativo</h3>
+            <p>Localiza iniciativas y proyectos.</p>
+          </article>
+
+          <article class="card">
+            <h3>Agenda</h3>
+            <p>Consulta actividades abiertas.</p>
+          </article>
+
+          <article class="card">
+            <h3>Participa</h3>
+            <p>Envía propuestas y ayuda a construir el proyecto.</p>
+          </article>
+
+          <article class="card">
+            <h3>Comunidad</h3>
+            <p>Conecta con otras personas comprometidas con el territorio.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="notice">
+          <h2>Estamos empezando.</h2>
+          <p>
+            La plataforma se encuentra en construcción y crecerá gracias a las
+            aportaciones de la comunidad.
+          </p>
+          <p>
+            Desde hoy ya puedes consultar el mapa y enviar propuestas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta">
+      <div class="container narrow">
+        <h2>Forma parte de Archipiélago Vivo</h2>
+
+        <div class="button-group center">
+          <a class="button button-primary" href="/participa.html">Participar</a>
+          <a class="button button-secondary" href="/mapa.html">Ver mapa</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contacto" class="site-footer">
+    <div class="container footer-content">
+      <p><strong>Archipiélago Vivo</strong></p>
+
+      <p>
+        <a href="mailto:archipielagovivo@riseup.net">
+          archipielagovivo@riseup.net
+        </a>
+      </p>
+
+      <p><a href="https://github.com/" rel="noopener">GitHub</a></p>
+      <p>Redes sociales: próximamente</p>
+      <p>Licencia: pendiente de definir</p>
+      <p>© 2026</p>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.querySelector(".menu-toggle");
+    const nav = document.querySelector("#main-nav");
+
+    menuButton.addEventListener("click", () => {
+      const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+      menuButton.setAttribute("aria-expanded", String(!isOpen));
+      nav.classList.toggle("is-open");
+    });
+  </script>
+</body>
+</html>
