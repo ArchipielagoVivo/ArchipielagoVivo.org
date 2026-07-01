@@ -356,3 +356,63 @@ h3 {
   margin: 1rem auto;
   border-radius: var(--radius);
 }
+
+
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.action-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  min-height: 210px;
+  padding: 1.5rem;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  text-decoration: none;
+  box-shadow: none;
+}
+
+.action-card:hover {
+  border-color: var(--color-primary-dark);
+}
+
+.action-card strong {
+  font-size: 1.15rem;
+  line-height: 1.25;
+}
+
+.action-card span:last-child {
+  color: var(--color-muted);
+}
+
+.action-kicker {
+  width: fit-content;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  background: var(--color-primary);
+  color: var(--color-primary-dark);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .action-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .action-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .action-card {
+    min-height: auto;
+  }
+}
